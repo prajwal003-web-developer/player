@@ -1,16 +1,18 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-export default function Page() {
-  const router = useRouter();
-  let { server, type, id, season, episode } = router.query;
-
-  const servers = [
+export const servers = [
 	'https://vidfast.pro/',
 	'https://www.vidking.net/embed/',
     'https://vidsrc-embed.ru/embed/'
 	
   ]
+
+export default function Page() {
+  const router = useRouter();
+  let { server, type, id, season, episode } = router.query;
+
+  
 
   if(!server){
     server=1
