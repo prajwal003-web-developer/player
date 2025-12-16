@@ -2,11 +2,16 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export const servers = [
-	'https://111movies.com/',
-    'https://vidsrc-embed.ru/embed/',
+
+   'https://vidsrc-embed.ru/embed/',
+   'https://vidfast.pro/',
+   'https://111movies.com/',
+	
+   
     'https://vidnest.fun/',
-    'https://www.vidking.net/embed/',
-    'https://vidfast.pro/'
+    //'https://www.vidking.net/embed/',
+    
+   
 	
   ]
 
