@@ -9,7 +9,7 @@ export const servers = [
 	
    
     'https://vidnest.fun/',
-    //'https://www.vidking.net/embed/',
+    'https://www.vidking.net/embed/',
     
    
 	
