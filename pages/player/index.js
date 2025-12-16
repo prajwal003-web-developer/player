@@ -32,7 +32,7 @@ export default function Page() {
     
     <iframe
   src={link}
-  style={{ width: "100%", height: "96dvh", border: "0" }}
+  style={{ width: "100%", height: "96dvh",margin:0, border: "0" }}
   allowFullScreen
   allow="encrypted-media"
 />

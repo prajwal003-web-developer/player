@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 16, "column": 0}, "map": {"version":3,"sources":["file:///media/prajwal-neupane/New%20Volume/CINEMA/player/pages/api/number.js"],"sourcesContent":["export default function handler(req, res) {\n  // Array of numbers to send\n  const numbers =  3;\n\n  res.status(200).json({ numbers });\n}\n"],"names":[],"mappings":";;;;AAAe,SAAS,QAAQ,GAAG,EAAE,GAAG;IACtC,2BAA2B;IAC3B,MAAM,UAAW;IAEjB,IAAI,MAAM,CAAC,KAAK,IAAI,CAAC;QAAE;IAAQ;AACjC","debugId":null}}]
+}
