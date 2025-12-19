@@ -2,12 +2,15 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export const servers = [
+
+'https://vidsrc-embed.ru/embed/',
+
   "https://player.videasy.net/",
   'https://vidfast.pro/',  
   "https://player.vidzee.wtf/embed/",
   "https://vidsync.xyz/embed/movie/",
 
-   'https://vidsrc-embed.ru/embed/',
+   
    "https://vidrock.net/",
    "https://primesrc.me/embed/",
   
