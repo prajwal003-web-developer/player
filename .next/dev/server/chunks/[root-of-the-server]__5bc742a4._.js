@@ -1,7 +1,37 @@
 module.exports = [
+"[externals]/next/dist/compiled/@opentelemetry/api [external] (next/dist/compiled/@opentelemetry/api, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/compiled/@opentelemetry/api", () => require("next/dist/compiled/@opentelemetry/api"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/pages-api-turbo.runtime.dev.js"));
+
+module.exports = mod;
+}),
 "[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)", ((__turbopack_context__, module, exports) => {
 
 const mod = __turbopack_context__.x("react/jsx-dev-runtime", () => require("react/jsx-dev-runtime"));
+
+module.exports = mod;
+}),
+"[externals]/react/jsx-runtime [external] (react/jsx-runtime, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("react/jsx-runtime", () => require("react/jsx-runtime"));
+
+module.exports = mod;
+}),
+"[externals]/react [external] (react, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("react", () => require("react"));
+
+module.exports = mod;
+}),
+"[externals]/next/dist/compiled/next-server/pages-turbo.runtime.dev.js [external] (next/dist/compiled/next-server/pages-turbo.runtime.dev.js, cjs)", ((__turbopack_context__, module, exports) => {
+
+const mod = __turbopack_context__.x("next/dist/compiled/next-server/pages-turbo.runtime.dev.js", () => require("next/dist/compiled/next-server/pages-turbo.runtime.dev.js"));
 
 module.exports = mod;
 }),
@@ -29,7 +59,7 @@ const mod = __turbopack_context__.x("react-dom", () => require("react-dom"));
 
 module.exports = mod;
 }),
-"[project]/pages/player/index.js [ssr] (ecmascript)", ((__turbopack_context__) => {
+"[project]/pages/player/index.js [api] (ecmascript)", ((__turbopack_context__) => {
 "use strict";
 
 __turbopack_context__.s([
@@ -39,8 +69,8 @@ __turbopack_context__.s([
     ()=>servers
 ]);
 var __TURBOPACK__imported__module__$5b$externals$5d2f$react$2f$jsx$2d$dev$2d$runtime__$5b$external$5d$__$28$react$2f$jsx$2d$dev$2d$runtime$2c$__cjs$29$__ = __turbopack_context__.i("[externals]/react/jsx-dev-runtime [external] (react/jsx-dev-runtime, cjs)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/head.js [ssr] (ecmascript)");
-var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/router.js [ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$api$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/head.js [api] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$api$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/router.js [api] (ecmascript)");
 ;
 ;
 ;
@@ -59,7 +89,7 @@ const servers = [
     'https://www.vidking.net/embed/'
 ];
 function Page() {
-    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$ssr$5d$__$28$ecmascript$29$__["useRouter"])();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$api$5d$__$28$ecmascript$29$__["useRouter"])();
     let { server, type, id, season, episode } = router.query;
     if (!server) {
         server = 1;
@@ -115,12 +145,23 @@ function Page() {
     }, void 0, true);
 }
 }),
-"[externals]/next/dist/shared/lib/no-fallback-error.external.js [external] (next/dist/shared/lib/no-fallback-error.external.js, cjs)", ((__turbopack_context__, module, exports) => {
+"[project]/pages/api/number.js [api] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
 
-const mod = __turbopack_context__.x("next/dist/shared/lib/no-fallback-error.external.js", () => require("next/dist/shared/lib/no-fallback-error.external.js"));
-
-module.exports = mod;
+__turbopack_context__.s([
+    "default",
+    ()=>handler
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$pages$2f$player$2f$index$2e$js__$5b$api$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/pages/player/index.js [api] (ecmascript)");
+;
+function handler(req, res) {
+    // Array of numbers to send
+    const numbers = __TURBOPACK__imported__module__$5b$project$5d2f$pages$2f$player$2f$index$2e$js__$5b$api$5d$__$28$ecmascript$29$__["servers"].length;
+    res.status(200).json({
+        numbers
+    });
+}
 }),
 ];
 
-//# sourceMappingURL=%5Broot-of-the-server%5D__3106cd8c._.js.map
+//# sourceMappingURL=%5Broot-of-the-server%5D__5bc742a4._.js.map

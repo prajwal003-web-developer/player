@@ -1,12 +1,17 @@
 import React from "react";
+import { servers} from "./player/index"
 
-const index = () => {
+const index =  () => {
+ const num = servers.length
+ 
   return (
     <>
       <style>{`
         * {
           box-sizing: border-box;
           font-family: Arial, sans-serif;
+          padding:0;
+          margin:0;
         }
 
         body {
@@ -82,9 +87,13 @@ const index = () => {
             <label>Server</label>
             <select name="server" required>
               <option value="">Select server</option>
-              <option value="1">Server 1</option>
-              <option value="2">Server 2</option>
-              <option value="3">Server 3</option>
+              {
+                Array.from({length:num}).map((_,idx)=>{
+                  return(
+                    <option key = {idx} value={idx+1}>Server {idx+1}</option>
+                  )
+                })
+              }
             </select>
 
             <label>Type</label>

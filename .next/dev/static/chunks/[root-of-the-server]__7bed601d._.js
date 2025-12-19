@@ -467,7 +467,9 @@ function triggerUpdate(msg) {
 
 __turbopack_context__.s([
     "default",
-    ()=>Page
+    ()=>Page,
+    "servers",
+    ()=>servers
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/react/jsx-dev-runtime.js [client] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$head$2e$js__$5b$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/head.js [client] (ecmascript)");
@@ -476,41 +478,76 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$rout
 var _s = __turbopack_context__.k.signature();
 ;
 ;
+const servers = [
+    //  'https://rivestream.net/embed?', make it when special
+    "https://player.videasy.net/",
+    "https://player.vidzee.wtf/embed/",
+    "https://vidsync.xyz/embed/movie/",
+    'https://vidfast.pro/',
+    'https://vidsrc-embed.ru/embed/',
+    "https://vidrock.net/",
+    "https://primesrc.me/embed/",
+    'https://vidnest.fun/',
+    'https://111movies.com/',
+    "https://spencerdevs.xyz/movie/",
+    'https://www.vidking.net/embed/'
+];
 function Page() {
     _s();
     const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$router$2e$js__$5b$client$5d$__$28$ecmascript$29$__["useRouter"])();
     let { server, type, id, season, episode } = router.query;
-    const servers = [
-        'https://vidfast.pro/',
-        'https://www.vidking.net/embed/',
-        'https://vidsrc-embed.ru/embed/'
-    ];
     if (!server) {
         server = 1;
     }
     let link = '';
+    const l1 = servers[server - 1];
     if (type == 'tv') {
         link = servers[server - 1] + 'tv/' + id + '/' + season + '/' + episode;
+        if (l1.startsWith("https://rivestream.net")) {
+            servers[server - 1] + 'type=tv&id=' + id + '&season=' + season + '&episode' + episode;
+        } else if (l1.startsWith("https://primesrc.me/embed")) {
+            link = l1 + 'tv?tmdb=' + id + '&season=' + season + '&episode=' + episode;
+        }
     } else {
         link = servers[server - 1] + 'movie/' + id;
+        if (link.startsWith("https://rivestream.net")) {
+            link = servers[server - 1] + 'type=movie&id=' + id;
+        } else if (l1.startsWith("https://primesrc.me/embed")) {
+            link = li + 'movie&tmdb=' + id;
+        }
     }
-    if (server = 1) {
-        link = link + '?autoplay=true';
-    }
-    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
-        src: link,
-        style: {
-            width: "100%",
-            height: "96dvh",
-            border: "0"
-        },
-        allowFullScreen: true,
-        allow: "encrypted-media"
-    }, void 0, false, {
-        fileName: "[project]/pages/player/index.js",
-        lineNumber: 33,
-        columnNumber: 5
-    }, this);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["Fragment"], {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
+                children: `
+        * {
+        margin:0;
+        padding:0;
+        background:black;
+        color:white;
+   }`
+            }, void 0, false, {
+                fileName: "[project]/pages/player/index.js",
+                lineNumber: 69,
+                columnNumber: 4
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$client$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
+                src: link,
+                style: {
+                    width: "100%",
+                    height: "96dvh",
+                    margin: 0,
+                    border: "0"
+                },
+                allowFullScreen: true,
+                allow: "encrypted-media"
+            }, void 0, false, {
+                fileName: "[project]/pages/player/index.js",
+                lineNumber: 78,
+                columnNumber: 5
+            }, this)
+        ]
+    }, void 0, true);
 }
 _s(Page, "fN7XvhJ+p5oE6+Xlo0NJmXpxjC8=", false, function() {
     return [
