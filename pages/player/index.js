@@ -3,9 +3,9 @@ import { useRouter } from "next/router";
 
 export const servers = [
   "https://player.videasy.net/",
+  'https://vidfast.pro/',  
   "https://player.vidzee.wtf/embed/",
   "https://vidsync.xyz/embed/movie/",
-   'https://vidfast.pro/',  
 
    'https://vidsrc-embed.ru/embed/',
    "https://vidrock.net/",
