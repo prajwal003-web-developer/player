@@ -5,6 +5,8 @@ export const servers = [
 
 'https://vidsrc-embed.ru/embed/',
 
+   "https://vidrock.net/",
+
   "https://player.videasy.net/",
   'https://vidfast.pro/',  
   "https://player.vidzee.wtf/embed/",
