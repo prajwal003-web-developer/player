@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export const servers = [
+"https://streams.iqsmartgames.com/embed/",
 
 'https://vidsrc-embed.ru/embed/',
 
@@ -64,7 +65,9 @@ export default function Page() {
     }
 
   }
-
+ if(link.startsWith("https://streams.iqsmartgames.com/")){
+	 link = link + "?key=f6e324cd9c321d6c6898d09c769478b2273a3a55"
+ }
   
 
 
