@@ -2,9 +2,12 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export const servers = [
+	"https://web.nxsha.app/embed/",
+'https://vidsrc-embed.ru/embed/',
+
 "https://streams.iqsmartgames.com/embed/",
 
-'https://vidsrc-embed.ru/embed/',
+
 
 "https://player.videasy.net/",
 
