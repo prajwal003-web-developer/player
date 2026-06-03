@@ -101,7 +101,6 @@ export default function Page() {
       `}</style>
 
       {/* FULLSCREEN BUTTON */}
-      <button onClick={enterFullScreen}>Fullscreen</button>
 
       {/* IFRAME */}
       <iframe
